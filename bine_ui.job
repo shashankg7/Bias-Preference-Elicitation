@@ -1,0 +1,22 @@
+#!/bin/sh
+# The folliwing lines instruct Slurm to allocate one GPU.
+#SBATCH --mem=16G
+#SBATCH --time=05:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+
+
+# Set-up the environment.
+#source activate saito-ictir 
+#source ${HOME}/.bashrc_temp
+#conda init bash
+#conda activate saito-ictir
+# source /ivi/ilps/personal/sgupta/anaconda3/etc/profile.d/conda.sh
+# conda activate saito-ictir
+# Start the experiment.
+
+source /ivi/ilps/personal/sgupta/anaconda3/etc/profile.d/conda.sh
+
+conda activate bine
+python ./src/utils/bine.py
+python BiNE/model/train.py --train-data ./data/processed/bine_embed_data.dat --d 25 --test-data ./data/processed/bine_embed_data.dat --lam 0.025 --max-iter 50 --model-name yahoo --rec 1 --large 2 --vectors-u ./models/embeddings/vectors_u.dat --vectors-v ./models/embeddings/vectors_v.dat

@@ -1,0 +1,5 @@
+lr: 0.001
+batch_size: 16
+max_iters: 10
+k_folds: 4
+runs: 10

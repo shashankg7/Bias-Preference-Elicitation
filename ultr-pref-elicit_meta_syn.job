@@ -1,0 +1,26 @@
+#!/bin/sh
+# The folliwing lines instruct Slurm to allocate one GPU.
+#SBATCH --mail-type=ALL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=s.gupta2@uva.nl # Where to send mail	
+#SBATCH -o ./logs/%A_%a.out                     
+#SBATCH -e ./logs/%A_%a.err                                                         
+#SBATCH --mem=50G
+#SBATCH --time=05:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+
+# Set-up the environment.
+#source activate saito-ictir 
+#source ${HOME}/.bashrc_temp
+#conda init bash
+#conda activate saito-ictir
+# Start the experiment.
+
+# export CUDA_HOME="/usr/local/cuda-10.2"
+# export PATH="${CUDA_HOME}/bin:${PATH}"
+# export LIBRARY_PATH="${CUDA_HOME}/lib64:${LIBRARY_PATH}"
+# export LD_LIBRARY_PATH="${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}"
+source /ivi/ilps/personal/sgupta/anaconda3/etc/profile.d/conda.sh
+conda activate fair_ranking
+
+python src/main.py --data synthetic --alpha $1
