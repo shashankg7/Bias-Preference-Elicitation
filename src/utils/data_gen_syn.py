@@ -66,7 +66,7 @@ for i in range(1, 6):
     counts.append(np.round(np.sum(observRM==i) * 1.0 / np.sum(observM), 3))
 print("the rating distribution of observed rating matrix is : \n", counts)
 
-path = '/home/sgupta/projects/ConvRecSys/ultr_prefelicit/data/raw/simulated/'
+path = './data/raw/simulated/'
 path += 'alpha' + str(alpha) + '/'
 if not os.path.exists(path):
     os.makedirs(path)

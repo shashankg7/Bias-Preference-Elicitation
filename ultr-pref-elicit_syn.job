@@ -17,7 +17,7 @@
 
 
 source #CONDA_PATH
-conda activate fair_ranking
+conda activate #ENV_NAME_FROM_REQ.txt
 
 python src/utils/hyper_param_gen.py 
 HPARAMS_FILE=config/hyper_parms.txt

@@ -19,6 +19,6 @@
 # export LIBRARY_PATH="${CUDA_HOME}/lib64:${LIBRARY_PATH}"
 # export LD_LIBRARY_PATH="${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}"
 source $CONDA_PATH
-conda activate fair_ranking
+conda activate #ENV_NAME_FROM_REQ.txt
 
 python src/main.py --data coat
