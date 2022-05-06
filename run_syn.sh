@@ -1,7 +1,5 @@
 #!/bin/sh
 # The folliwing lines instruct Slurm to allocate one GPU.
-#SBATCH --mail-type=ALL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=s.gupta2@uva.nl # Where to send mail	
 #SBATCH -o ./logs/%A_%a.out                     
 #SBATCH -e ./logs/%A_%a.err                                                         
 #SBATCH --mem=50G
