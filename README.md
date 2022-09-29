@@ -1,9 +1,9 @@
 ULTR_PrefElicit
 ==============================
 
-Code for anonymous ICTIR Submission for the paper, "A First Look at Selection Bias in Preference Elicitation for Recommendation". 
+Code for anonymous ECIR Submission for the paper, "A First Look at Selection Bias in Preference Elicitation for Recommendation". 
 
-Paper-ID for the submissions: 39
+Paper-ID for the submissions: 59
 
 ## Installing Conda Env for Synthetic Topic Simulation
 To generate synthetic topics for items, we create a user-item graph and use graph embeddings, using [BiNE method](http://staff.ustc.edu.cn/~hexn/papers/sigir18-bipartiteNE.pdf). 
